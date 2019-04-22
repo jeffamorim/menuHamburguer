@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    height: 60px;
+    background-color: black;
+  }
+  
+  nav div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+  }
+  
+  nav div a {
+    text-decoration: none;
+    color: #E8FD01;
+    font-size: 15pt;
+  }
+  
+  span {
+    content: "\007C";
+    color: gray;
+  }
+  
+  nav section {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  nav section aside {
+    display: none;
+    width: 35px;
+    height: 3px;
+    margin-top: 7px;
+    margin-right: 5px;
+    background-color: #FFFF00;
+  }
+  
+  @media (max-width:768px) {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      width: 100vw;
+    }
+    span {
+      display: none;
+      content: "\007C";
+      color: gray;
+    }
+    .abrirMenu {
+      transform: translateX(0);
+    }
+  
+    .girarLinha{
+      transform: rotateX(0deg);
+      transform: rotateY(0deg);
+    }
+  
+    nav div {
+      /* display: none; */
+      background-color: black;
+      width: 100vw;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(-100vw);
+      transition: 0.5s;
+    }
+    nav section {
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    nav section aside {
+      display: flex;
+      width: 35px;
+      height: 3px;
+      margin-top: 7px;
+      margin-right: 5px;
+      background-color: #FFFF00;
+    }
+  }
+  
+  @media (max-width:425px) {
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav div {
+      /* display: none; */
+      background-color: black;
+      width: 100vw;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(-150vh);
+      transition: 0.5s;
+    }
+    .abrirMenu {
+        transform: translateY(25vh);
+    }
+    nav section {
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      border: 1px solid red;
+    }
+    nav section aside {
+      display: flex;
+      width: 35px;
+      height: 3px;
+      margin-top: 7px;
+      margin-right: 5px;
+      background-color: #FFFF00;
+    }
+  }
